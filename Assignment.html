@@ -1,0 +1,30 @@
+<script>
+let sentence=prompt("Enter sentence that contain three good")+("</br>")
+let toRemove="good"
+document.write(sentence);
+let position=prompt("Which 'good' you want to remove (First, Middle or Last)")
+if(position.toLowerCase()=="first")
+{
+let index1=sentence.indexOf(toRemove)
+sentence=sentence.slice(0,index1)+sentence.slice(index1+toRemove.length)
+document.write(sentence);
+}
+else if(position.toLowerCase()=="middle")
+{
+let index1=sentence.indexOf(toRemove)
+let index2=sentence.indexOf(toRemove,index1+1)
+sentence=sentence.slice(0,index2)+sentence.slice(index2+toRemove.length)
+document.write(sentence);
+}
+else if(position.toLowerCase()=="last")
+{
+let index1=sentence.indexOf(toRemove)
+let index2=sentence.indexOf(toRemove,index1+1)
+let index3=sentence.indexOf(toRemove,index2+1)
+sentence=sentence.slice(0,index3)+sentence.slice(index3+toRemove.length)
+document.write(sentence);
+}
+else{
+    document.write("Please give correct input")
+}
+</script>
